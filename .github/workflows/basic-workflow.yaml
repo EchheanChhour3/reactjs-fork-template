@@ -7,11 +7,11 @@ env:
   IMAGE_NAME: reactjs-af-fullstack
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest #self-hosted
+    runs-on: ubuntu-latest
     environment: DOCKER_REPOSITORY
     steps: 
       - name: Checkout Code 
-        uses: actions/checkout@v3 #
+        uses: actions/checkout@v3 
       - name: Use with SHA 
         run: | 
           echo "TAG=${GITHUB_SHA::8}" >> $GITHUB_ENV
